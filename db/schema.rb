@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2018_11_06_103414) do
   create_table "locations", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,8 +41,8 @@ ActiveRecord::Schema.define(version: 2018_11_06_103414) do
     t.text "description"
     t.text "short_description"
     t.string "price"
-    t.integer "store_id"
     t.string "image"
+    t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

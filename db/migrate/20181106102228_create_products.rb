@@ -5,8 +5,8 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.text :description
       t.text :short_description
       t.string :price
-      t.integer :store_id
       t.string :image
+      t.integer :location_id
       t.timestamps
     end
   end
