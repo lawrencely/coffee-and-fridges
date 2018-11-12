@@ -1,0 +1,8 @@
+<div class="form-group">
+  <h1>Create New Location</h1>
+  <%= form_for(:location, :url => {:controller => 'locations', :action => 'create'}) do |f| %>
+    <p> Name:</br> <%= f.text_field :name, class: "form-control" %> </p>
+    <p> Description:</br> <%= f.text_field :description, class: "form-control" %> </p>
+    <%= f.submit :submit, class: "btn btn-primary" %>
+  <% end %>
+</div>
