@@ -73,11 +73,23 @@ class OrdersController < ApplicationController
 # working :)
   ##########
 
+  # def create
+  #   customer = Customer.find params[:customer_id]
+  #   @order = customer.orders.create
+  #   @order.customer = customer
+  #   @order.store = @store
+  #   params[:products].each do |p|
+  #     product = Product.find p[1][:product_id].to_i
+  #     order_item = OrderItem.create(product_id: product.id, price: product.price, quantity: p[1][:quantity] )
+  #     @order.order_items << order_item
+  #   end
+  #   @order.save
+  #   render json: @order
+  # end
+
   def create
-    customer = Customer.find params[:customer_id]
-    @order = customer.orders.create
-    @order.customer = customer
-    @order.store = @store
+    location = Location.first
+    @order = location.orders.create
     params[:products].each do |p|
       product = Product.find p[1][:product_id].to_i
       order_item = OrderItem.create(product_id: product.id, price: product.price, quantity: p[1][:quantity] )
