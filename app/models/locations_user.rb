@@ -1,16 +1,14 @@
 # == Schema Information
 #
-# Table name: orders
+# Table name: locations_users
 #
 #  id          :integer          not null, primary key
-#  status      :string
-#  memo        :string
 #  location_id :integer
+#  user_id     :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 
-class Order < ApplicationRecord
-  has_many :order_items
-  belongs_to :location
+class LocationsUser < ApplicationRecord
+  
 end

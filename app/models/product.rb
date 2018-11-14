@@ -14,5 +14,6 @@
 #
 
 class Product < ApplicationRecord
-  belongs_to :locations
+  belongs_to :location
+  has_many :order_items
 end
