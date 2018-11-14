@@ -1,0 +1,18 @@
+<div class="">
+  <%= @product.name %>
+  <br>
+  <%= @product.description %>
+  <br>
+  <%= @product.short_description %>
+  <br>
+  <%= @product.price %>
+  <br>
+  <%= image_tag @product.image %>
+</div>
+
+<h2>Tasks Show page</h2>
+<p><%= @location.name %></p>
+
+<% @location.products.each do |p| %>
+  <p><%= p.name %></p>
+<% end %>

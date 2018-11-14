@@ -1,0 +1,8 @@
+<%= form_for(:product, :url => {:controller => 'products', :action => 'create'}) do |f| %>
+  <p> Product Name:</br> <%= f.text_field :name, class: "form-control" %> </p>
+  <p> Short Description:</br> <%= f.text_field :short_description, class: "form-control" %> </p>
+  <p> Description:</br> <%= f.text_field :description, class: "form-control" %> </p>
+  <p> Image:</br> <%= f.text_field :image, class: "form-control" %></p>
+  <p> Price:</br> <%= f.text_field :price, class: "form-control" %></p>
+  <%= f.submit :Create, class: "btn btn-primary" %>
+<% end %>

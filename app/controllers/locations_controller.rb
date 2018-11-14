@@ -4,7 +4,9 @@ class LocationsController < ApplicationController
 
   def create
     @location = Location.new location_params
-    if @location
+    if @location and @current_user
+      @location.users << @current_user
+      @current_user.locations << @location
       @location.save
       redirect_to location_path
     else
@@ -28,6 +30,6 @@ class LocationsController < ApplicationController
 
   private
   def location_params
-    params.require(:location).permit(:name, :description, :user_id)
+    params.require(:location).permit(:name, :description)
   end
 end

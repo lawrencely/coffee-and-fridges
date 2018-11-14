@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# @user = User.create(name: 'lawrence', email: 'lawrence@studyquery,com', password_digest: "abcdefgh")
+# @location = Location.create(name: 'Ngee Ann Polytechnic', description: 'About the School')
+# @product = Product.create( name: 'Bootstrap Coffee Coconut', description: "this is a coffee description" , price: '8', image: '/assets/image/coffee.png')
+
+# @location.users << @user
+# @user.locations << @location
+# @location.products << @product
+#
+# @location.save
+# @user.save
+# @product.save

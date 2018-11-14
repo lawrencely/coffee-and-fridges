@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <% if @current_user %>
+      <%= @current_user.name %>
+    <% else %>
+      <p>User not logged in</p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
